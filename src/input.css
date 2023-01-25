@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.hero{
+    background-image: url("../images/bg-hero-desktop.svg");
+    
+}
+.btn{
+    transition: all .6s ease-in-out;
+}
+.btn:hover{
+    background-color: rgb(231, 229, 229);
+    transform: translateY(-2px);
+}
+.pink-btn{
+    transition: all .5s ease;
+}
+.pink-btn:hover{
+background-color: hsl(322, 93%, 72%);
+transform: translateY(-3px);
+}
+.pink-btn{
+    background: hsl(322, 100%, 66%);
+    color: #fff;
+    animation: moveleft 4s ease-in;
+}
+
+@keyframes moveleft {
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(10px);
+    }
+}
+h1 h2{
+    font-family: 'Poppins', sans-serif;
+}
+.foot-logo img{
+    filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
+  
+}
+footer{
+    background-color: rgb(1, 43, 40);
+    
+}
+
+.build{
+animation: moveUp 3s ease;
+}
+@keyframes moveUp {
+    0%{
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translate(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@media only screen and (max-width: 640px)  {
+    .hero{
+        background-image: url("../images/bg-hero-mobile.svg");
+        
+    }   
+}
